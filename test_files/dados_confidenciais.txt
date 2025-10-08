@@ -1,0 +1,62 @@
+Podemos representar um tipo de dado que pode agrupar outros tipos de dados, sejam iguais ou não, podendo alterar o valor desses elementos. Esse tipo é conhecido como:
+String
+Desconstrução de objeto
+Tipos anônimos
+Método
+Tupla
+A resposta correta é: Tupla
+
+Explicação:
+
+As tuplas em C# são tipos de dados que podem agrupar múltiplos elementos de tipos iguais ou diferentes, e esses elementos podem ter seus valores alterados (são mutáveis).
+
+Exemplos de tuplas em C#:
+
+csharp
+// Tupla simples
+(string, int) pessoa = ("João", 30);
+Console.WriteLine($"{pessoa.Item1} tem {pessoa.Item2} anos");
+
+// Tupla com nomes nos elementos
+(string Nome, int Idade) pessoaNomeada = ("Maria", 25);
+Console.WriteLine($"{pessoaNomeada.Nome} tem {pessoaNomeada.Idade} anos");
+
+// Tupla com múltiplos tipos diferentes
+(var nome, var idade, var salario, var ativo) = ("Carlos", 35, 2500.50m, true);
+
+// Alterando valores da tupla (mutabilidade)
+pessoaNomeada.Nome = "Ana";
+pessoaNomeada.Idade = 28;
+Características das tuplas:
+
+✅ Agrupam múltiplos elementos
+
+✅ Podem ter tipos diferentes
+
+✅ São mutáveis (valores podem ser alterados)
+
+✅ Úteis para retornar múltiplos valores de métodos
+
+✅ Sintaxe leve e eficiente
+
+Exemplo com método retornando tupla:
+
+csharp
+public (string, int, bool) ObterInformacoesPessoa()
+{
+    return ("João", 30, true);
+}
+
+// Uso
+var (nome, idade, ativo) = ObterInformacoesPessoa();
+Por que as outras opções estão incorretas:
+
+String: Representa apenas texto, não agrupa tipos diferentes
+
+Desconstrução de objeto: É uma operação, não um tipo de dado
+
+Tipos anônimos: Agrupam dados mas são imutáveis
+
+Método: É uma operação/função, não um tipo de dado para agrupar valores
+
+As tuplas são ideais para quando precisamos agrupar temporariamente alguns valores relacionados sem a necessidade de criar uma classe ou struct específica.

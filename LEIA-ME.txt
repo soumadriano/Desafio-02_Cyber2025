@@ -1,0 +1,4 @@
+Seus arquivos foram criptografados!
+Para recuperar seus arquivos, envie 1 Bitcoin para o endereço XXXXXX.
+Depois de enviar o pagamento, envie um email para decrypt@domain.
+Você receberá a chave de descriptografia.
